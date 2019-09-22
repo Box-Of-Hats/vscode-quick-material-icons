@@ -80,7 +80,7 @@ const generateMaterialIconsMarkup = (): string => {
     </head>
     <body>
         <h1>Material Icons</h1>
-        <input oninput="handleInputChange(this.value)" type="text"/>
+        <input oninput="handleInputChange(this.value)" placeholder="Search" type="text"/>
         <table>
         <thead>
             <tr>

@@ -23,6 +23,32 @@
                 "command": "extension.quickMaterialIcons.showIconList",
                 "title": "Quick Material Icons: Show Icon List"
             }
+        ],
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets-react.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/snippets-react.json"
+            },
+            {
+                "language": "razor",
+                "path": "./snippets/snippets.json"
+            }
         ]
     },
     "scripts": {
