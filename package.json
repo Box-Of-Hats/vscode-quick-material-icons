@@ -6,7 +6,7 @@
         "name": "box-of-hats"
     },
     "publisher": "box-of-hats",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.38.0"
     },
