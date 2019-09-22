@@ -76,11 +76,17 @@ const generateMaterialIconsMarkup = (): string => {
             margin: 20px 4px;
         }
 
+        .results {
+            overflow:scroll;
+            max-height: 90vh;
+        }
+
         </style>
     </head>
     <body>
         <h1>Material Icons</h1>
         <input oninput="handleInputChange(this.value)" placeholder="Search" type="text"/>
+        <div class="results">
         <table>
         <thead>
             <tr>
@@ -105,6 +111,7 @@ const generateMaterialIconsMarkup = (): string => {
                 .join("")}
             </tbody>
         </table>
+        </div>
         <script>
         function handleInputChange(searchTerm){
             console.log(searchTerm);
