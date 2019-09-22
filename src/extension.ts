@@ -37,17 +37,66 @@ const generateMaterialIconsMarkup = (): string => {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <title>Material Icons</title>
+        <style>
+
+        .icon-name {
+        }
+
+        .icon i.material-icons {
+            padding: 2px 6px;
+            font-size: 34pt;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        </style>
     </head>
     <body>
         <h1>Material Icons</h1>
-        <ul>
-        ${materialIconNames
-            .map(mi => {
-                return `<li><i class="material-icons">${mi}</i><span>${mi}</span></li>`;
-            })
-            .join("")}
-        </ul>
-
+        <input oninput="handleInputChange(this.value)" type="text"/>
+        <table>
+        <thead>
+            <tr>
+            <td>icon</td>
+            <td>icon_name</td>
+            </tr>
+        </thead>
+            <tbody>
+            ${materialIconNames
+                .map(mi => {
+                    return `
+                        <tr data-icon-name="${mi}" >
+                            <td class="icon">
+                                <i class="material-icons">${mi}</i>
+                            </td>
+                            <td class="icon-name">
+                                ${mi}
+                            </td>
+                        </tr>
+                    `;
+                })
+                .join("")}
+            </tbody>
+        </table>
+        <script>
+        function handleInputChange(searchTerm){
+            console.log(searchTerm);
+            document.querySelectorAll("tr").forEach(element => {
+                var iconName = element.getAttribute("data-icon-name");
+                if (iconName){
+                    if (searchTerm == ""){
+                        element.classList.remove("hidden");
+                    } else if (iconName.includes(searchTerm) ){
+                        element.classList.remove("hidden");
+                    } else {
+                        element.classList.add("hidden");
+                    }
+                }
+            });
+        }
+        </script>
     </body>
     </html>
     `;
