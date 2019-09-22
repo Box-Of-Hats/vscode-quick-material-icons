@@ -10,6 +10,9 @@
     "engines": {
         "vscode": "^1.38.0"
     },
+    "repository": {
+        "url": "https://github.com/Box-Of-Hats/vscode-quick-material-icons"
+    },
     "categories": [
         "Other"
     ],
