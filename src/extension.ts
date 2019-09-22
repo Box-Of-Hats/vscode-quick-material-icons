@@ -16,7 +16,6 @@ export function activate(context: vscode.ExtensionContext) {
                 vscode.ViewColumn.One,
                 {
                     enableScripts: true,
-                    enableFindWidget: true,
                     retainContextWhenHidden: true
                 }
             );
@@ -40,15 +39,41 @@ const generateMaterialIconsMarkup = (): string => {
         <style>
 
         .icon-name {
+            font-size: 1.1rem;
         }
 
         .icon i.material-icons {
             padding: 2px 6px;
-            font-size: 34pt;
+            font-size: 1.8rem;
         }
 
         .hidden {
             display: none;
+        }
+
+        input {
+            width: 90%;
+            font-size: 1.5rem;
+            margin: 4px 0;
+            padding: 4px 8px;
+            font-family: "Arial";
+            outline: 0;
+            background: rgba(40,40,40,0.7);
+            color: rgba(210,230,220,0.8);
+            border-radius: 4px;
+            border: 2px solid rgba(40,40,40,0.7);
+        }
+
+        th {
+            font-size: 1.3rem;
+        }
+
+        input:focus {
+            outline: 0;
+        }
+
+        tr {
+            margin: 20px 4px;
         }
 
         </style>
