@@ -58,10 +58,18 @@ const generateMaterialIconsMarkup = (): string => {
             padding: 4px 8px;
             font-family: "Arial";
             outline: 0;
-            background: rgba(40,40,40,0.7);
-            color: rgba(210,230,220,0.8);
             border-radius: 4px;
             border: 2px solid rgba(40,40,40,0.7);
+        }
+
+        body.vscode-dark input {
+            background: rgba(0,0,0,0.1);
+            color: rgba(255,255,255,0.8);
+        }
+
+        body.vscode-light input {
+            background: rgba(0,0,0,0.1);
+            color: rgba(0,0,0,0.8);
         }
 
         th {
