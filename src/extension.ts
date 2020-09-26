@@ -136,6 +136,11 @@ const generateMaterialIconsMarkup = (): string => {
                 }
             });
         }
+
+        (function(){
+            document.querySelector('input').focus();
+        })()
+
         </script>
     </body>
     </html>
